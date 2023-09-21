@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.extraPaths": [
+        "./PE2/Module 1/Exprmt",
+        "./PE2/Module 1/packages"
+    ]
+}
