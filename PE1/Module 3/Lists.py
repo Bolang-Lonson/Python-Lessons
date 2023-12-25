@@ -29,3 +29,10 @@ print("Step 5:", beatles)
 print("The Fab", len(beatles))
 for member in beatles:
     print(member, end=", ")
+
+list1 = ['a', 'b', 'c']
+list2 = ['d', 'e', 'f']
+# appending a whole list to another
+list3 = list1.extend(list2)
+list1.pop() # removes and returns last element
+list2.pop(1)    # removes and returns element at index
