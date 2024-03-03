@@ -15,4 +15,31 @@ class C(A):
 class D(B, C):
     pass
 
+class E(C, B):
+    pass
+
+
 D().info()
+E().info()
+# Python finds the requested method in the class B definition and stops searching
+
+
+
+'''MRO inconsistency'''
+class A:
+    def info(self):
+        print('Class A')
+
+class B(A):
+    def info(self):
+        print('Class B')
+
+class C(A):
+    def info(self):
+        print('Class C')
+
+class D(A, C):
+    pass
+
+D().info()
+# TypeError: Cannot create a consistent method resolutionorder (MRO) for bases A, C
