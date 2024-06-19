@@ -17,9 +17,14 @@ class MyHtmlParser(HTMLParser):
         if tag in self.header_count.keys():
             self.header_count[tag] += 1
 
+        # digging into anchor tag attributes to get hrefs
         if tag == 'a':
             self.anchor_count += 1
-            self.anchor_attr[self.anchor_count] = attrs
+            for attr in attrs:
+                # isolating href attributes
+                if attr[0] == 'href':
+                    href = attr[1]
+                    self.anchor_attr[f'href{self.anchor_count}'] = href
 
 
 
