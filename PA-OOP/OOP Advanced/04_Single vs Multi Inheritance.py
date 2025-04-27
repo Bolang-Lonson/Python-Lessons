@@ -42,4 +42,4 @@ class D(A, C):
     pass
 
 D().info()
-# TypeError: Cannot create a consistent method resolutionorder (MRO) for bases A, C
+# TypeError: Cannot create a consistent method resolution order (MRO) for bases A, C

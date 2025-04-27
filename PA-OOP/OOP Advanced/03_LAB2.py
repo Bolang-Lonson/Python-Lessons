@@ -9,7 +9,7 @@ class TimeInterval:
         self.minutes = minutes
         self.seconds = seconds
 
-    def __add_sub(self, other, operation_type):
+    def __add_sub(self, other, operation_type: str):
         own = self.hours * 3600 + self.minutes * 60 + self.seconds
         another = other.hours * 3600 + other.minutes * 60 + other.seconds
 
@@ -26,7 +26,7 @@ class TimeInterval:
 
         return TimeInterval(hours=new_hours, minutes=new_minutes, seconds=new_seconds)
     
-    def __int_add_sub(self, other, op):
+    def __int_add_sub(self, other: int, op: str):
         '''new method added to handle integer second addition and subtraction'''
         own = self.hours * 3600 + self.minutes * 60 + self.seconds
 
@@ -49,7 +49,7 @@ class TimeInterval:
         elif isinstance(other, int):
             return self.__int_add_sub(other, 'add')
         else:
-            raise TypeError('can only add TimeInterval objects')
+            raise TypeError('can only add TimeInterval or Integer (seconds) objects')
 
     def __sub__(self, other):
         if isinstance(other, TimeInterval):
@@ -57,7 +57,7 @@ class TimeInterval:
         elif isinstance(other, int):
             return self.__int_add_sub(other, 'sub')
         else:
-            raise TypeError('can only subtract TimeInterval objects')
+            raise TypeError('can only subtract TimeInterval or Integer (seconds) objects')
 
     def __mul__(self, other):
         if isinstance(other, int):

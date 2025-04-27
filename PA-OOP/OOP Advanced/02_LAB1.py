@@ -50,7 +50,7 @@ class TimeInterval:
             raise TypeError('can only subtract TimeInterval objects')
     
 
-    def __mul__(self, other):
+    def __mul__(self, other: int):
         if isinstance(other, int):
             h = self.time.hour * other
             m = self.time.minute * other
@@ -65,7 +65,10 @@ class TimeInterval:
                 h += (m // 60)
                 m %= 60
 
-            return f'{h}:{m}:{s}'
+            if h >= 24:
+                h %= 24
+
+            return TimeInterval(h, m, s)
         else:
             raise TypeError('can only multiply TimeInterval objects by integers')
     
@@ -125,6 +128,8 @@ class TimeInterval:
 
     def __str__(self):
         return "%s:%s:%s" % (self.hours, self.minutes, self.seconds)
+    
+
 t1 = TimeInterval(hours=21, minutes=58, seconds=50)
 t2 = TimeInterval(1, 45, 22)
 
