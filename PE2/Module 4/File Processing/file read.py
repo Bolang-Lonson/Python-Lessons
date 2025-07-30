@@ -2,7 +2,7 @@ from os import strerror
 
 try:
     cnt = 0
-    s = open('C:/Users/New User/OneDrive/Desktop/Python Lessons/PE2/Module 4/File Processing/file write and read.py', "rt")
+    s = open('/Users/annie/Documents/Dev/Python Lessons/PE2/Module 4/File Processing/file write and read.py', "rt")
     ch = s.read(1)
     while ch != '':
         print(ch, end='')
@@ -16,7 +16,7 @@ except IOError as e:
 ######################################################### OR ####
 try:
     cnt = 0
-    s = open('C:/Users/New User/OneDrive/Desktop/Python Lessons/PE2/Module 4/File Processing/file write and read.py', "rt")
+    s = open('/Users/annie/Documents/Dev/Python Lessons/PE2/Module 4/File Processing/file write and read.py', "rt")
     content = s.read()
     for ch in content:
         print(ch, end='')

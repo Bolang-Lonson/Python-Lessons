@@ -1,4 +1,3 @@
-from typing import List
 i = 0
 vect: list[str] = []
 elt: str = ""
