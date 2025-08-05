@@ -1,6 +1,6 @@
 from sys import path
 
-path.append('C:\\Users\\New User\\OneDrive\\Desktop\\Python Lessons\\PE2\\Module 1\\packages\\extrapack.zip')
+path.append('/Users/annie/Documents/Dev/Python-Lessons/PE2/Module 1/packages/extrapack.zip')
 
 from extra.iota import funI
 import extra.ugly.omega as om
