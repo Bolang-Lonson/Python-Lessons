@@ -1,4 +1,5 @@
 class ExampleClass:
+    '''This is an example class to demonstrate class variables and their behavior.'''
     varia = 1
 
     def __init__(self, val):
