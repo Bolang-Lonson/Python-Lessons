@@ -8,7 +8,7 @@ for a in range(-2, 3):
 
 
 """ Scenarios to benefit from anonymous lambda function"""
-def print_function(args, fun):
+def print_function(args: list[float], fun: callable) -> None:
     for x in args:
         print('f(', x,')=', fun(x), sep='')
 
