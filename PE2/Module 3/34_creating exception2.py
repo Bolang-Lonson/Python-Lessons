@@ -11,7 +11,7 @@ class TooMuchCheeseError(PizzaError):
         self.cheese = cheese
 
 
-def make_pizza(pizza, cheese):
+def make_pizza(pizza: str, cheese: int) -> None:
     if pizza not in ['margherita', 'capricciosa', 'calzone']:
         raise PizzaError
     if cheese > 100:
