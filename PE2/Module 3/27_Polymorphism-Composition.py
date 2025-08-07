@@ -11,10 +11,10 @@ class Wheels:
 
 
 class Vehicle:
-    def __init__(self, controller):
+    def __init__(self, controller: Wheels | Tracks):
         self.controller = controller
 
-    def turn(self, left):
+    def turn(self, left: bool):
         self.controller.change_direction(left, True)
         time.sleep(0.25)
         self.controller.change_direction(left, False)
